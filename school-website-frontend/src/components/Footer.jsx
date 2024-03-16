@@ -89,9 +89,9 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="rounded border border-school-red bg-school-red px-10 py-3 text-sm font-medium text-white focus:outline-none focus:ring active:text-school-red flex gap-2 justify-center"
+                  className="rounded border border-school-red bg-school-red px-10 py-3 text-sm font-medium text-white focus:outline-none focus:ring active:text-school-red flex gap-2 justify-center items-center"
                 >
-                  Donate <Heart size={20} fill="white" />
+                  Donate <Heart size={16} fill="white" />
                 </a>
               </li>
             </ul>
