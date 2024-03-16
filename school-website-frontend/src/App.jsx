@@ -1,5 +1,6 @@
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import { Images } from "./components/Images";
 import Navbar from "./components/Navbar";
 
 export default function App() {
@@ -8,6 +9,7 @@ export default function App() {
       <div>
         <Navbar />
         <Hero />
+        <Images />
         <Footer />
       </div>
     </>
