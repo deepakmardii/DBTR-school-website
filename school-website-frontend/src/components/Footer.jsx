@@ -81,10 +81,8 @@ const Footer = () => {
 
           <div>
             <ul className="mt-6 space-y-4 text-sm">
-              <li>
-                <a href="#" className="transition hover:opacity-75">
-                  Big or small, you can make an impact.
-                </a>
+              <li className="transition hover:opacity-75">
+                Big or small, you can make an impact.
               </li>
               <li>
                 <a
