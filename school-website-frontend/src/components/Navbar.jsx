@@ -22,7 +22,7 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="flex gap-10">
-        <button className="inline-block rounded border border-school-red px-12 py-3 text-school-red focus:outline-none focus:ring active:bg-school-red">
+        <button className="inline-block rounded border-2 border-school-red px-12 py-3 text-school-red focus:outline-none focus:ring active:bg-school-red">
           CSR
         </button>
         <button className="rounded border border-school-red bg-school-red px-10 py-3 text-white focus:outline-none focus:ring active:text-school-red flex gap-2 items-center">
