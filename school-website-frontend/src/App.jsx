@@ -35,10 +35,8 @@ const App = () => {
     <>
       <Navbar />
       <Hero />
-      <div className="text-xl font-bold p-20">
-        <Categories />
-        <Blogs />
-      </div>
+      <Categories />
+      <Blogs />
       <Footer />
     </>
   );

@@ -22,10 +22,10 @@ const BlogCard = ({ blog, blogs }) => {
   return (
     <>
       <div
-        className="max-w-md text-dark1 rounded-2xl shadow cursor-pointer flex flex-col"
+        className="w-full text-dark1 rounded-2xl shadow cursor-pointer flex flex-col"
         onClick={handleModalOpen}
       >
-        <div className="h-48 w-full">
+        <div className="h-[50vh] w-full">
           {blogImageURL && (
             <img
               className="rounded-t-2xl object-cover object-center w-full h-full"

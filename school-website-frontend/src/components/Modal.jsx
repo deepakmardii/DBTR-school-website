@@ -28,27 +28,33 @@ const Modal = ({ isOpen, onClose, blogs, initialIndex }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none">
+    <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none bg-black bg-opacity-75">
       <div className="relative w-auto mx-auto max-w-3xl">
-        <div className="relative flex flex-col w-full bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none">
-          <div className="flex items-start justify-between p-5 border-b border-solid rounded-t border-slate-200">
-            <h3 className="text-3xl font-semibold">
-              {currentBlog.attributes.Title}
-            </h3>
+        <div className="relative flex flex-col w-full border-0 rounded-lg shadow-lg outline-none focus:outline-none">
+          <div className="flex items-start justify-between p-5">
             <button
-              className="bg-transparent border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+              className="bg-transparent border-0 text-white float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
               onClick={onClose}
+              style={{ marginLeft: "auto" }}
             >
-              <span className="bg-transparent text-black h-6 w-6 text-2xl block outline-none focus:outline-none">
+              <span className="bg-transparent text-white h-6 w-6 text-2xl block outline-none focus:outline-none">
                 ×
               </span>
             </button>
           </div>
-          <div className="relative flex-auto p-6">
+          <div className="relative flex-auto p-6 flex flex-col justify-between">
             {blogImageURL && (
-              <img src={blogImageURL} alt={currentBlog.attributes.Title} />
+              <img
+                src={blogImageURL}
+                alt={currentBlog.attributes.Title}
+                className="rounded-lg m-10"
+              />
             )}
-            <div className="absolute inset-y-0 left-0 pl-4 flex items-center">
+            <div className="flex justify-between text-white mx-10">
+              <h3>{currentBlog.attributes.Title}</h3>
+              <h3>{currentBlog.attributes.date}</h3>
+            </div>
+            <div className="absolute inset-y-0 left-0 flex items-center">
               <button
                 onClick={handlePrevClick}
                 className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full"
@@ -56,7 +62,7 @@ const Modal = ({ isOpen, onClose, blogs, initialIndex }) => {
                 &#8249;
               </button>
             </div>
-            <div className="absolute inset-y-0 right-0 pr-4 flex items-center">
+            <div className="absolute inset-y-0 right-0 flex items-center">
               <button
                 onClick={handleNextClick}
                 className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full"

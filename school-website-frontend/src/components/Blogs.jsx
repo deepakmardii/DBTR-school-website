@@ -28,11 +28,14 @@ const Blogs = () => {
   }, [categoryBlogs, loadMoreCount]);
 
   return (
-    <div className="flex flex-col justify-center items-center">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 w-full">
+    <div className="flex flex-col py-10 px-40 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-10  justify-items-center ">
         {visibleBlogs.map((blog) => (
-          <div key={blog.id}>
-            <BlogCard blog={blog} blogs={categoryBlogs} />
+          <div
+            key={blog.id}
+            className="flex justify-center items-center w-full"
+          >
+            <BlogCard blog={blog} blogs={categoryBlogs} className="w-full" />
           </div>
         ))}
       </div>

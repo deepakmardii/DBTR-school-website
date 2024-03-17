@@ -19,7 +19,7 @@ const Categories = () => {
   };
 
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="flex flex-wrap gap-4 px-20 py-10">
       {categories.map((category) => (
         <div key={category.id}>
           <Category
