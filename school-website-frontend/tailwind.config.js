@@ -9,6 +9,10 @@ export default {
         "school-socials": "#2B306A",
         dark1: "#4A4A4A",
         dark2: "#191919",
+        blue1: "#3481E8",
+        "pill-bg": "#F4F4F4",
+        "pill-border": "#D0D0D0",
+        "pill-text": "#4E4E4F",
       },
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
