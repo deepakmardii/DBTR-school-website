@@ -4,7 +4,8 @@
   "info": {
     "singularName": "image",
     "pluralName": "images",
-    "displayName": "Image"
+    "displayName": "Image",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,26 +13,29 @@
   "pluginOptions": {},
   "attributes": {
     "Image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": true,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "Title": {
       "type": "string",
       "required": true
     },
-    "Date": {
-      "type": "string",
-      "required": true
+    "date": {
+      "type": "date"
     },
     "categories": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "images"
+    },
+    "dateStamp": {
+      "type": "string",
+      "required": true
     }
   }
 }

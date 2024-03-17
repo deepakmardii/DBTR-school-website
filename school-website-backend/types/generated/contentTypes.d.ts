@@ -829,6 +829,7 @@ export interface ApiImageImage extends Schema.CollectionType {
     singularName: 'image';
     pluralName: 'images';
     displayName: 'Image';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -836,12 +837,13 @@ export interface ApiImageImage extends Schema.CollectionType {
   attributes: {
     Image: Attribute.Media & Attribute.Required;
     Title: Attribute.String & Attribute.Required;
-    Date: Attribute.String & Attribute.Required;
+    date: Attribute.Date;
     categories: Attribute.Relation<
       'api::image.image',
       'manyToMany',
       'api::category.category'
     >;
+    dateStamp: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
