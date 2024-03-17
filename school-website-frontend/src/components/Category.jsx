@@ -11,7 +11,7 @@ const Category = ({ cat, onCategoryClick, isSelected }) => {
       className={`rounded-full ${
         isSelected
           ? "bg-blue1 hover:bg-blue1 text-white"
-          : "bg-pill-border hover:bg-blue1 cursor-pointer"
+          : "bg-pill-border border-2 hover:bg-blue1 cursor-pointer"
       }  focus:outline-none focus:ring active:text-opacity-75`}
     >
       <span

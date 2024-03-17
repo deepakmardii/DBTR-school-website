@@ -106,16 +106,28 @@ const Footer = () => {
             <p>&copy; DBTR 2023, All Rights Reserved</p> | <p>Sitemap</p>
           </div>
           <div className=" flex flex-row justify-center items-center gap-4">
-            Designed by{" "}
-            <span className="text-4xl font-extralight">Deepak Mardi</span>
+            Designed by
+            <span className="text-4xl font-extralight">
+              DEEPAK M<span className="text-school-red">A</span>RDI
+            </span>
           </div>
         </div>
         <div className="flex gap-6 text-school-socials text-2xl">
-          <FaTwitter className="opacity-40 hover:opacity-100" />
-          <FaLinkedin className="opacity-40 hover:opacity-100" />
-          <FaInstagram className="opacity-40 hover:opacity-100" />
-          <FaFacebook className="opacity-40 hover:opacity-100" />
-          <FaYoutube className="opacity-40 hover:opacity-100" />
+          <a href="#">
+            <FaTwitter className="opacity-40 hover:opacity-100" />
+          </a>
+          <a href="#">
+            <FaLinkedin className="opacity-40 hover:opacity-100" />
+          </a>
+          <a href="#">
+            <FaInstagram className="opacity-40 hover:opacity-100" />
+          </a>
+          <a href="#">
+            <FaFacebook className="opacity-40 hover:opacity-100" />
+          </a>
+          <a href="#">
+            <FaYoutube className="opacity-40 hover:opacity-100" />
+          </a>
         </div>
       </div>
     </div>

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import { IoClose } from "react-icons/io5";
 
 const Modal = ({ isOpen, onClose, blogs, initialIndex }) => {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
@@ -28,17 +30,17 @@ const Modal = ({ isOpen, onClose, blogs, initialIndex }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none bg-black bg-opacity-75">
+    <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden  bg-black bg-opacity-75">
       <div className="relative w-auto mx-auto max-w-3xl">
-        <div className="relative flex flex-col w-full border-0 rounded-lg shadow-lg outline-none focus:outline-none">
-          <div className="flex items-start justify-between p-5">
+        <div className="relative flex flex-col w-full border-0 rounded-lg">
+          <div className="flex items-start justify-between">
             <button
-              className="bg-transparent border-0 text-white float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+              className="bg-transparent border-0 text-white float-right text-3xl"
               onClick={onClose}
               style={{ marginLeft: "auto" }}
             >
-              <span className="bg-transparent text-white h-6 w-6 text-2xl block outline-none focus:outline-none">
-                ×
+              <span className="bg-transparent text-white h-6 w-6 text-5xl block mx-20">
+                <IoClose />
               </span>
             </button>
           </div>
@@ -50,24 +52,20 @@ const Modal = ({ isOpen, onClose, blogs, initialIndex }) => {
                 className="rounded-lg m-10"
               />
             )}
-            <div className="flex justify-between text-white mx-10">
-              <h3>{currentBlog.attributes.Title}</h3>
+            <div className="flex justify-between text-xl text-white mx-10">
+              <h3 className="font-playfair text-2xl">
+                {currentBlog.attributes.Title}
+              </h3>
               <h3>{currentBlog.attributes.date}</h3>
             </div>
             <div className="absolute inset-y-0 left-0 flex items-center">
-              <button
-                onClick={handlePrevClick}
-                className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full"
-              >
-                &#8249;
+              <button onClick={handlePrevClick} className="text-white text-4xl">
+                <SlArrowLeft />
               </button>
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center">
-              <button
-                onClick={handleNextClick}
-                className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full"
-              >
-                &#8250;
+              <button onClick={handleNextClick} className="text-white text-4xl">
+                <SlArrowRight />
               </button>
             </div>
           </div>

@@ -10,12 +10,12 @@ const Hero = () => {
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
       </div>
-      <div className="relative z-10 flex items-center justify-center h-full">
-        <div className="text-center text-white">
-          <h1 className="text-7xl font-bold mb-4 font-playfair py-4">
+      <div className="relative z-10 flex items-center justify-center h-full text-center text-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-4xl lg:text-7xl font-bold mb-4 font-playfair py-4">
             Our events gallery
           </h1>
-          <p className="text-2xl px-72">
+          <p className="text-lg lg:text-2xl">
             Events at DBTR are filled with joyous occasions, cultural
             gatherings, and learning opportunities that bring us all together.
           </p>

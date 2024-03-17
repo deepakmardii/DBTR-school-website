@@ -40,9 +40,7 @@ const BlogCard = ({ blog, blogs }) => {
           </h5>
           <div className="flex gap-2 items-center">
             <CiCalendar className="text-blue1 text-2xl" />
-            <p className="text-base font-normal">
-              {blog.attributes.publishedAt}
-            </p>
+            <p className="text-base font-normal">{blog.attributes.date}</p>
           </div>
         </div>
       </div>

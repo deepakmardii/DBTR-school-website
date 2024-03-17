@@ -793,7 +793,7 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   info: {
     singularName: 'blog';
     pluralName: 'blogs';
-    displayName: 'Blog';
+    displayName: 'Image';
     description: '';
   };
   options: {
@@ -830,11 +830,6 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   };
   attributes: {
     Title: Attribute.String & Attribute.Required & Attribute.Unique;
-    images: Attribute.Relation<
-      'api::category.category',
-      'manyToMany',
-      'api::image.image'
-    >;
     blogs: Attribute.Relation<
       'api::category.category',
       'manyToMany',
@@ -851,45 +846,6 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::category.category',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiImageImage extends Schema.CollectionType {
-  collectionName: 'images';
-  info: {
-    singularName: 'image';
-    pluralName: 'images';
-    displayName: 'Image';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Image: Attribute.Media & Attribute.Required;
-    Title: Attribute.String & Attribute.Required;
-    date: Attribute.Date;
-    categories: Attribute.Relation<
-      'api::image.image',
-      'manyToMany',
-      'api::category.category'
-    >;
-    dateStamp: Attribute.String & Attribute.Required;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::image.image',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::image.image',
       'oneToOne',
       'admin::user'
     > &
@@ -917,7 +873,6 @@ declare module '@strapi/types' {
       'plugin::i18n.locale': PluginI18NLocale;
       'api::blog.blog': ApiBlogBlog;
       'api::category.category': ApiCategoryCategory;
-      'api::image.image': ApiImageImage;
     }
   }
 }

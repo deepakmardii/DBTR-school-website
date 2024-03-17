@@ -43,7 +43,7 @@ const Blogs = () => {
         <div className="flex justify-center mt-8 w-full">
           <button
             onClick={loadMoreBlogs}
-            className="inline-block rounded border-2 border-school-red px-12 py-3 text-school-red focus:outline-none focus:ring active:bg-school-red font-semibold"
+            className="inline-block rounded border-2 border-school-red px-12 py-3 text-school-red active:bg-school-red font-semibold"
           >
             View more
           </button>
