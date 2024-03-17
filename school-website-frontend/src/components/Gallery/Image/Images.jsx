@@ -1,5 +1,7 @@
 import React from "react";
 
-export const Images = () => {
+const Images = () => {
   return <div>Images</div>;
 };
+
+export default Images;

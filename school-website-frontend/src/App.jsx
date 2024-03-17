@@ -1,7 +1,8 @@
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
-import { Images } from "./components/Images";
 import Navbar from "./components/Navbar";
+import Categories from "./components/Gallery/Category/Categories";
+import Images from "./components/Gallery/Image/Images";
 
 export default function App() {
   return (
@@ -9,7 +10,10 @@ export default function App() {
       <div className="font-poppins">
         <Navbar />
         <Hero />
-        <Images />
+        <div>
+          <Categories />
+          <Images />
+        </div>
         <Footer />
       </div>
     </>
