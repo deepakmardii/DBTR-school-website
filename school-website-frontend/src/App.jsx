@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Categories from "./components/Gallery/Category/Categories";
-import Images from "./components/Gallery/Image/Images";
 import { useDispatch } from "react-redux";
-import { setImages } from "./feature/slices/imageSlice";
-import { setCategories } from "./feature/slices/categoriesSlice";
+import Blogs from "./components/Blogs";
+import Categories from "./components/Categories";
+import { setBlogs } from "./feature/slices/blogSlice";
+import { setCategories } from "./feature/slices/categorySlice";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Footer from "./components/Footer";
 
-export default function App() {
+const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -16,15 +16,13 @@ export default function App() {
       try {
         const categoryRes = await fetch("http://127.0.0.1:1337/api/categories");
         const categoryData = await categoryRes.json();
-        console.log(categoryData);
         dispatch(setCategories(categoryData.data));
 
-        const imageRes = await fetch(
-          "http://127.0.0.1:1337/api/images?populate=*"
+        const blogRes = await fetch(
+          "http://127.0.0.1:1337/api/blogs?populate=*"
         );
-        const imageData = await imageRes.json();
-        console.log(imageData);
-        dispatch(setImages(imageData.data));
+        const blogData = await blogRes.json();
+        dispatch(setBlogs(blogData.data));
       } catch (err) {
         console.log(err);
       }
@@ -32,17 +30,18 @@ export default function App() {
 
     fetchData();
   }, [dispatch]);
+
   return (
     <>
-      <div className="font-poppins">
-        <Navbar />
-        <Hero />
-        <div>
-          <Categories />
-          <Images />
-        </div>
-        <Footer />
+      <Navbar />
+      <Hero />
+      <div className="text-xl font-bold p-20">
+        <Categories />
+        <Blogs />
       </div>
+      <Footer />
     </>
   );
-}
+};
+
+export default App;

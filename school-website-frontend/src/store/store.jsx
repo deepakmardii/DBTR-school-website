@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import imageSlice from "../feature/slices/imageSlice";
-import categorySlice from "../feature/slices/categoriesSlice";
+import blogSlice from "../feature/slices/blogSlice";
+import categorySlice from "../feature/slices/categorySlice";
 
 const store = configureStore({
   reducer: {
-    image: imageSlice,
+    blogs: blogSlice,
     categories: categorySlice,
   },
 });
