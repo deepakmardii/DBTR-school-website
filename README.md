@@ -9,7 +9,7 @@ https://github.com/deepakmardii/school-website/assets/67671892/4baf0713-eca6-41f
 Clone the repo
 
 ```
-https://github.com/deepakmardii/school-website.git
+git clone https://github.com/deepakmardii/school-website.git
 ```
 ### Setup Backend
 1. Navigate to backend dir
